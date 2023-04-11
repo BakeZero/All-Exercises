@@ -1,0 +1,15 @@
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\bin\Debug\net6.0\All_Exercises.exe
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\bin\Debug\net6.0\All_Exercises.deps.json
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\bin\Debug\net6.0\All_Exercises.runtimeconfig.json
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\bin\Debug\net6.0\All_Exercises.dll
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\bin\Debug\net6.0\All_Exercises.pdb
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.csproj.AssemblyReference.cache
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.AssemblyInfoInputs.cache
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.AssemblyInfo.cs
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.csproj.CoreCompileInputs.cache
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.dll
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\refint\All_Exercises.dll
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.pdb
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\All_Exercises.genruntimeconfig.cache
+C:\Users\harry\Desktop\Grand Circus\All_Exercises\All_Exercises\obj\Debug\net6.0\ref\All_Exercises.dll
