@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 
 class Program
@@ -8,7 +9,7 @@ class Program
         Console.WriteLine("Welcome to the Grand Circus Exercises list!");
         while (true)
         {
-            Console.WriteLine("Please select an exercise: (1-21) ");
+            Console.WriteLine("Please select an exercise: (1-36) ");
             int exerciseNumber = int.Parse(Console.ReadLine());
 
             switch (exerciseNumber)
@@ -82,7 +83,57 @@ class Program
                 case 23:
                     Exercise_23();
                     break;
-
+                case 24:
+                    Exercise_24();
+                    break;
+                case 25:
+                    Exercise_25();
+                    break;
+                case 26:
+                    Exercise_26();
+                    break;
+                case 27:
+                    Exercise_27();
+                    break;
+                case 28:
+                    Exercise_28();
+                    break;
+                case 29:
+                    Exercise_29();
+                    break;
+                case 30:
+                    Exercise_30();
+                    break;
+                case 31:
+                    Exercise_31();
+                    break;
+                case 32:
+                    Exercise_32();
+                    break;
+                case 33:
+                    Exercise_33();
+                    break;
+                case 34:
+                    Exercise_34();
+                    break;
+                case 35:
+                    Exercise_35();
+                    break;
+                case 36:
+                    Exercise_36();
+                    break;
+                case 37:
+                    Exercise_37();
+                    break;
+                case 38:
+                    Exercise_38();
+                    break;
+                case 39:
+                    Exercise_39();
+                    break;
+                case 40:
+                    Exercise_40();
+                    break;
 
 
                 default:
@@ -395,21 +446,334 @@ class Program
             prompt = Console.ReadLine();
         } while (prompt == "y");
     }
-    static void Exercise_22() { }
-    static void Exercise_23() { }
-    static void Exercise_24() { }
-    static void Exercise_25() { }
-    static void Exercise_26() { }
-    static void Exercise_27() { }
-    static void Exercise_28() { }
-    static void Exercise_29() { }
-    static void Exercise_30() { }
-    static void Exercise_31() { }
-    static void Exercise_32() { }
-    static void Exercise_33() { }
-    static void Exercise_34() { }
-    static void Exercise_35() { }
-    static void Exercise_36() { }
+    static void Exercise_22()
+    {
+        Console.Write("Exercise 22 selected. ");
+        int num1, num2, num3;
+        string prompt;
+        do
+        {
+            Console.Write("Enter a number: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter another number: ");
+            num2 = int.Parse(Console.ReadLine());
+            Console.Write("Enter a number to verify it is in the range: ");
+            num3 = int.Parse(Console.ReadLine());
+
+            if (num3 >= num1 && num3 <= num2)
+                Console.WriteLine($"{num3} is in the range.");
+            else
+                Console.WriteLine($"{num3} is outside the range.");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+
+
+    }
+    static void Exercise_23()
+    {
+        Console.Write("Exercise 23 selected. ");
+        string prompt;
+        do
+        {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+            Console.WriteLine($"{text.Substring(0,10)}");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_24()
+    {
+        Console.Write("Exercise 24 selected. ");
+        string prompt;
+        do
+        {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+            Console.WriteLine($"{text.Substring(text.Length-10)}");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_25()
+    {
+        Console.Write("Exercise 25 selected. ");
+        string prompt;
+
+        do
+        {
+            Console.Write("Enter a sentence: ");
+            string sentence = Console.ReadLine();
+            string[] arr = sentence.Trim().Split(' ');
+            foreach (var e in arr)
+                Console.WriteLine(e);
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_26()
+    {
+        Console.Write("Exercise 26 selected. ");
+        string prompt;
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+        do
+        {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+            int count = 0;
+            foreach (char c in text)
+            {
+                if (vowels.Contains(c))
+                    count++;
+            }
+            Console.WriteLine($"There were {count} vowels");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_27()
+    {
+        Console.Write("Exercise 27 selected. ");
+        string prompt;
+        char[] consonants = { 'q', 'w', 'r', 't', 'y', 'p', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm',
+                              'Q','W','R','T','Y','P','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M' };
+        do
+        {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+            int count = 0;
+            foreach (char c in text)
+            {
+                if (consonants.Contains(c))
+                    count++;
+            }
+            Console.WriteLine($"There were {count} consonants");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+
+    static void Exercise_28()
+    {
+        Console.Write("Exercise 28 selected. ");
+        string prompt;
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+        do
+        {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (vowels.Contains(text[i]))
+                    text = text.Remove(i,1);
+            }
+            Console.WriteLine(text);
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_29()
+    {
+        Console.Write("Exercise 29 selected. ");
+        string prompt;
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+        do
+        {
+            Console.Write("Enter some text: ");
+            string sentence = Console.ReadLine();
+            string[] text = sentence.Trim().Split(' ');
+
+            for (int j = 0; j<text.Length; j++)
+            {
+                for (int i = 1; i < text[j].Length - 1; i++)
+                {
+                    if (vowels.Contains(text[j][i]))
+                        text[j] = text[j].Remove(i, 1);
+                }
+            }
+            string ret = "";
+            foreach (string s in text)
+                { ret += s + " "; }
+
+            Console.WriteLine(ret.Trim());
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_30()
+    {
+        Console.Write("Exercise 30 selected. ");
+        string prompt;
+        do
+        {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+            char[] charArray = text.ToCharArray();
+            Array.Reverse(charArray);
+            Console.WriteLine(new String(charArray));
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_31()
+    {
+        Console.Write("Exercise 31 selected. ");
+        string prompt = "";
+        int[] arr = new int[5] { 2, 8, 0, 24, 51 };
+        do
+        {
+            Console.Write("Enter an index (0-4): ");
+            int input = int.Parse(Console.ReadLine());
+            if (input > 4 || input < 0)
+            {
+                Console.WriteLine("That is not a valid index.");
+            }
+            else
+                Console.WriteLine($"The value at index {input} is {arr[input]}");
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_32()
+    {
+        Console.Write("Exercise 32 selected. ");
+        string prompt = "";
+        int[] arr = new int[5] { 2, 8, 0, 24, 51 };
+        do
+        {
+            Console.Write("Enter a number: ");
+            int input = int.Parse(Console.ReadLine());
+            bool found = false;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == input)
+                {
+                    Console.WriteLine($"The value {input} can be found at index {i}.");
+                    found = true;
+                }
+            }
+            if (found == false)
+                Console.WriteLine("That value cannot be found in the array.");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_33()
+    {
+        Console.Write("Exercise 33 selected. ");
+        string prompt = "y";
+        int[] arr = new int[5] { 2, 8, 0, 24, 51 };
+        do
+        {
+            Console.Write("Enter an index of the array (0-4): ");
+            int input = int.Parse(Console.ReadLine());
+            if (input > 4 || input < 0)
+            {
+                Console.WriteLine("That is not a valid index. Please try again.");
+                continue;
+            }
+            Console.Write($"The value at index {input} is {arr[input]}. Would you like to change it (y/n)? ");
+            string prompt2 = Console.ReadLine();
+            if (prompt2 == "y")
+            {
+                Console.Write($"Enter the new value at index {input}: ");
+                arr[input] = int.Parse(Console.ReadLine());
+
+            }
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_34()
+    {
+        Console.Write("Exercise 34 selected. ");
+        string prompt = "y";
+        int[] arr = new int[5] { 16, 32, 64, 128, 256 };
+
+        do
+        {
+            Console.Write("Enter a command (half/double): ");
+            string command = Console.ReadLine();
+
+            Console.Write("The array now contains: ");
+
+            if (command == "half")
+            {
+                for (int i = 0; i<arr.Length; i++)
+                {
+                    arr[i] /= 2;
+                    Console.Write($"{arr[i]}");
+                    if (i == arr.Length-1)
+                        Console.WriteLine(".");
+                    else
+                        Console.Write(", ");
+                }
+            }
+            else
+            {
+                for (int i =0; i<arr.Length;i++)
+                {
+                    arr[i] *= 2;
+                    Console.Write($"{arr[i]}");
+                    if (i == arr.Length-1)
+                        Console.WriteLine(".");
+                    else
+                        Console.Write(", ");
+                }
+            }       
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");    
+    }
+    static void Exercise_35()
+    {
+        string prompt = "y";
+        string[] animals = { "cow", "elephant", "jaguar", "horse", "crow" };
+        do
+        {
+            Console.Write("Enter two indices separated by a space: ");
+            string[] indices = Console.ReadLine().Split(' ');
+            int ind1 = int.Parse(indices[0]);
+            int ind2 = int.Parse(indices[1]);
+
+            if ((ind1 >= 0 && ind1 < 5) && (ind2 >= 0 && ind2 < animals[ind1].Length))
+                Console.WriteLine($"The value at index {ind1} is {animals[ind1]}. The letter at index {ind2} is {animals[ind1][ind2]}");
+            else
+                Console.WriteLine("Those are not valid indices");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_36()
+    {
+        int[] nums = new int[5] { 12, 11, 10, 9, 8 };
+        string[] str = new string[5] { "Drummers Drumming", "Pipers Piping", "Lords a-Leaping", "Ladies Dancing", "Maids a-Milking" };
+
+        Console.Write("Exercise 36 selected. Enter a command (sing/quit): ");
+        string prompt = Console.ReadLine();
+        while (prompt == "sing")
+        {
+            for (int i=0; i<5; i++)
+                Console.WriteLine(nums[i] + " " + str[i]);
+
+            Console.Write("Enter a command (sing/quit): ");
+            prompt = Console.ReadLine();
+        }
+    }
     static void Exercise_37() { }
     static void Exercise_38() { }
     static void Exercise_39() { }
