@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Immutable;
+using System.Dynamic;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 
@@ -9,7 +11,7 @@ class Program
         Console.WriteLine("Welcome to the Grand Circus Exercises list!");
         while (true)
         {
-            Console.WriteLine("Please select an exercise: (1-36) ");
+            Console.WriteLine("Please select an exercise: (1-46) ");
             int exerciseNumber = int.Parse(Console.ReadLine());
 
             switch (exerciseNumber)
@@ -134,8 +136,99 @@ class Program
                 case 40:
                     Exercise_40();
                     break;
-
-
+                case 41:
+                    Exercise_41();
+                    break;
+                case 42:
+                    Exercise_42();
+                    break;
+                case 43:
+                    Exercise_43();
+                    break;
+                case 44:
+                    Exercise_44();
+                    break;
+                case 45:
+                    Exercise_45();
+                    break;
+                case 46:
+                    Exercise_46();
+                    break;
+                case 47:
+                    Exercise_47();
+                    break;
+                case 48:
+                    Exercise_48();
+                    break;
+                case 49:
+                    Exercise_49();
+                    break;
+                case 50:
+                    Exercise_50();
+                    break;
+                case 51:
+                    Exercise_51();
+                    break;
+                case 52:
+                    Exercise_52();
+                    break;
+                case 53:
+                    Exercise_53();
+                    break;
+                case 54:
+                    Exercise_54();
+                    break;
+                case 55:
+                    Exercise_55();
+                    break;
+                case 56:
+                    Exercise_56();
+                    break;
+                case 57:
+                    Exercise_57();
+                    break;
+                case 58:
+                    Exercise_58();
+                    break;
+                case 59:
+                    Exercise_59();
+                    break;
+                case 60:
+                    Exercise_60();
+                    break;
+                case 61:
+                    Exercise_61();
+                    break;
+                case 62:
+                    Exercise_62();
+                    break;
+                case 63:
+                    Exercise_63();
+                    break;
+                case 64:
+                    Exercise_64();
+                    break;
+                case 65:
+                    Exercise_65();
+                    break;
+                case 66:
+                    Exercise_66();
+                    break;
+                case 67:
+                    Exercise_67();
+                    break;
+                case 68:
+                    Exercise_68();
+                    break;
+                case 69:
+                    Exercise_69();
+                    break;
+                case 70:
+                    Exercise_70();
+                    break;
+                case 71:
+                    Exercise_71();
+                    break;
                 default:
                     Exercise_1();
                     break;
@@ -774,16 +867,211 @@ class Program
             prompt = Console.ReadLine();
         }
     }
-    static void Exercise_37() { }
-    static void Exercise_38() { }
-    static void Exercise_39() { }
-    static void Exercise_40() { }
-    static void Exercise_41() { }
-    static void Exercise_42() { }
-    static void Exercise_43() { }
-    static void Exercise_44() { }
-    static void Exercise_45() { }
-    static void Exercise_46() { }
+    static void Exercise_37()
+    {
+        int[] nums = new int[5];
+        Console.WriteLine("Exercise 37 selected.");
+
+        string prompt = "y";
+        do
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter a number: ");
+                nums[i] = int.Parse(Console.ReadLine());
+            }
+
+            double sum = 0;
+            foreach (int i in nums)
+            {
+                sum += i;
+            }
+            Console.WriteLine($"{nums[0]} + {nums[1]} + {nums[2]} + {nums[3]} + {nums[4]} = {sum}");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_38()
+    {
+        int[] nums = new int[5];
+        Console.WriteLine("Exercise 38 selected.");
+
+        string prompt = "y";
+        do
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter a number: ");
+                nums[i] = int.Parse(Console.ReadLine());
+            }
+
+            double average = 0;
+            foreach (int i in nums)
+            {
+                average += i;
+            }
+            average = average / nums.Length;
+            Console.WriteLine($"{nums[0]} + {nums[1]} + {nums[2]} + {nums[3]} + {nums[4]}/5 = {average}");
+
+            Console.Write("Would you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_39()
+    {
+        int[] nums = new int[5];
+        Console.WriteLine("Exercise 39 selected.");
+
+        string prompt = "y";
+        do
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter a number: ");
+                nums[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(nums);
+            foreach (int i in nums)
+            {
+                Console.Write(i + " ");
+            }
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_40()
+    {
+        int[] nums = new int[5];
+        Console.WriteLine("Exercise 40 selected.");
+
+        string prompt = "y";
+        do
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter a number: ");
+                nums[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(nums);
+            Console.WriteLine($"The median of ({nums[0]}, {nums[1]}, {nums[2]}, {nums[3]}, {nums[4]}) is {nums[2]}");
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_41()
+    {
+        Console.Write("Exercise 41 selected. ");
+        string prompt = "y";
+        do
+        {
+            Console.Write("Enter a number: ");
+            decimal num1 = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter another number: ");
+            decimal num2 = decimal.Parse(Console.ReadLine());
+            decimal division = num1 / num2;
+            Console.WriteLine(String.Format("{0}/{1} is approximately {2:0.##}", num1, num2, division));
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_42() 
+    {
+        Console.WriteLine("Exercise 42 selected. ");
+        string prompt = "y";
+
+        do
+        {
+            Console.Write("Enter an X coordinate: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.Write("Enter a Y coordinate: ");
+            int y = int.Parse(Console.ReadLine());
+            Point point = new Point(x, y);
+            Console.WriteLine($"You have created a point object ({point.x}, {point.y})");
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_43()
+    {
+        Console.WriteLine("Exercise 43 selected. ");
+        string prompt = "y";
+
+        do
+        {
+            Console.Write("Enter an X coordinate: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.Write("Enter a Y coordinate: ");
+            int y = int.Parse(Console.ReadLine());
+            Point point = new Point(x, y);
+            Console.Write($"You have created a point object ({point.x}, {point.y}). ");
+            Console.WriteLine($"It has a distance of {Point.CalculateDistance(point)}");
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_44()
+    {
+        Console.WriteLine("Exercise 44 selected. ");
+        string prompt = "y";
+
+        do
+        {
+            Console.Write("Enter coordinates for a point (x y): ");
+            int[] first = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            Console.Write("Enter a second point: ");
+            int[] second = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            
+            Point firstPoint = new Point(first[0], first[1]);
+            Point secondPoint = new Point(second[0], second[1]);
+
+            Point midpoint = firstPoint.CalculateMidpoint(secondPoint);
+            Console.WriteLine($"The midpoint between ({firstPoint.x},{firstPoint.y}) and ({secondPoint.x},{secondPoint.y}) is ({midpoint.x},{midpoint.y}).");
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_45()
+    {
+        Console.WriteLine("Exercise 45 selected. ");
+        string prompt = "y";
+
+        do
+        {
+            Console.Write("Enter a side length: ");
+            int length = int.Parse(Console.ReadLine());
+            Square square = new Square(length);
+            Console.WriteLine($"The square has a side length {square.sideLength}. Its area is {square.CalculateArea()} and its perimeter is {square.CalculatePerimeter()}.");
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_46()
+    {
+        Console.WriteLine("Exercise 46 selected. ");
+        string prompt = "y";
+
+        do
+        {
+            Console.Write("Enter the side lengths of a triangle (a b c): ");
+            int[] sides = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+            Triangle triangle = new Triangle(sides[0], sides[1], sides[2]);
+            Console.Write("The triangle has side lengths ");
+            Console.Write($"{triangle.side1Length}, {triangle.side2Length}, and {triangle.side3Length}. ");
+            Console.WriteLine($"Its area is {triangle.CalculateArea()} and its perimeter is {triangle.CalculatePerimeter()}");
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
     static void Exercise_47() { }
     static void Exercise_48() { }
     static void Exercise_49() { }
@@ -809,4 +1097,61 @@ class Program
     static void Exercise_69() { }
     static void Exercise_70() { }
     static void Exercise_71() { }
+}
+
+public class Triangle
+{
+    public int side1Length, side2Length, side3Length;
+
+    public Triangle(int side1Length, int side2Length, int side3Length)
+    {
+        this.side1Length = side1Length;
+        this.side2Length = side2Length;
+        this.side3Length = side3Length;
+    }   
+
+    public int CalculatePerimeter()
+    {
+        return side1Length + side2Length + side3Length;
+    }
+    public int CalculateArea()
+    {
+        int semi = CalculatePerimeter() / 2;
+        return (int)Math.Sqrt(semi * (semi - side1Length) * (semi - side2Length) * (semi - side3Length));
+    }
+}
+
+
+public class Square
+{
+    public int sideLength;
+    public Square(int l) { sideLength = l; }
+    public int CalculatePerimeter()
+    {
+        return sideLength * 4;
+    }
+    public int CalculateArea()
+    {
+        return sideLength * sideLength;
+    }
+}
+
+public class Point
+{
+    public int x, y;
+    public Point(int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+
+    public static int CalculateDistance(Point p)
+    {
+        return (int)Math.Sqrt(Math.Pow((p.x - 0), 2) + Math.Pow((p.y - 0), 2));
+    }
+
+    public Point CalculateMidpoint(Point other)
+    {
+        return new Point((this.x + other.x) / 2, (this.y + other.y) / 2);
+    }
 }
