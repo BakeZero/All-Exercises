@@ -1072,9 +1072,62 @@ class Program
             prompt = Console.ReadLine();
         } while (prompt == "y");
     }
-    static void Exercise_47() { }
-    static void Exercise_48() { }
-    static void Exercise_49() { }
+    static void Exercise_47()
+    {
+        Console.WriteLine("Exercise 47 selected. ");
+        string prompt = "y";
+        List<string> strList = new List<string>();
+
+        do
+        {
+            Console.Write("Enter some text: ");
+            strList.Add(Console.ReadLine());
+            foreach (var s in strList)
+                Console.Write(s + " ");
+            Console.WriteLine();
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+    }
+    static void Exercise_48()
+    {
+        Console.WriteLine("Exercise 48 selected. ");
+        string prompt = "y";
+        do
+        {
+            int num;
+            List<int> numbers = new List<int>();
+            while (true)
+            {
+                Console.Write("Enter a number (q to quit): ");
+                if (!int.TryParse(Console.ReadLine(), out num))
+                    break;
+                numbers.Add(num);
+                
+            }
+            int sum = 0;
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (i < numbers.Count - 1)
+                {
+                    Console.Write($"{numbers[i]} + ");
+                }
+                else
+                    Console.Write($"{numbers[i]} = ");
+                sum += numbers[i];
+            }
+            Console.WriteLine(sum);
+
+            Console.Write("\nWould you like to continue (y/n)? ");
+            prompt = Console.ReadLine();
+        } while (prompt == "y");
+
+    }
+    static void Exercise_49() 
+    {
+        Console.WriteLine("Exercise  49 selected.");
+        
+    }
     static void Exercise_50() { }
     static void Exercise_51() { }
     static void Exercise_52() { }
@@ -1097,6 +1150,18 @@ class Program
     static void Exercise_69() { }
     static void Exercise_70() { }
     static void Exercise_71() { }
+
+    static bool Continue()
+    {
+        Console.Write("Would you like to continue (y/n)?: ");
+        string prompt = Console.ReadLine();
+        if (prompt.ToLower() == "y")
+            return true;
+        else if (prompt.ToLower() == "n")
+            return false;
+        else
+            return Continue();
+    }
 }
 
 public class Triangle
